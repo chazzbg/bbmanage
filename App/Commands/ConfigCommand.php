@@ -26,10 +26,6 @@ class ConfigCommand extends Command {
 	protected function execute( InputInterface $input, OutputInterface $output ) {
 		/** @var QuestionHelper $helper */
 		$helper = $this->getHelper('question');
-		$key = '';
-		$secret = '';
-		$username = '';
-		$slack_url = '';
 
 		$key_question = new Question('Please provide Bitbucket OAuth consumer key:');
 		$key_question->setValidator(function($value){

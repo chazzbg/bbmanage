@@ -2,16 +2,13 @@
 
 namespace App\Commands;
 
-
 use Bitbucket\API\Api;
 use Bitbucket\API\Http\Listener\OAuthListener;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 class SetServiceCommand  extends Command {
@@ -31,13 +28,8 @@ class SetServiceCommand  extends Command {
 	}
 
 	protected function execute( InputInterface $input, OutputInterface $output ) {
-		try {
-			$this->loadConfig();
-		} catch ( Exception $e ) {
 
-		}
-
-
+		$this->loadConfig();
 
 		$slug = $input->getArgument('slug');
 
