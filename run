@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+require_once './vendor/autoload.php';
+
+function getProjectRoot(){
+	return dirname(__FILE__).'/';
+}
+
+
+use App\Commands\ConfigCommand;
+use App\Commands\SetServiceCommand;
+use Symfony\Component\Console\Application;
+
+
+$app= new Application();
+$app->add(new ConfigCommand());
+$app->add(new SetServiceCommand());
+$app->run();
+

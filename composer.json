@@ -1,0 +1,18 @@
+{
+    "name": "dilkov/bitcleanup",
+    "require": {
+        "gentle/bitbucket-api": "^0.6.2",
+        "symfony/console": "v2.7.1",
+        "symfony/yaml": "v2.7.1"
+    },
+    "authors": [
+        {
+            "name": "chazz",
+            "email": "chazzbg@gmail.com"
+        }
+    ],
+
+  "autoload": {
+    "psr-4": { "App\\": "App" }
+  }
+}
