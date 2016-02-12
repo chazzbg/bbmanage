@@ -9,11 +9,13 @@ function getProjectRoot(){
 
 use App\Commands\ConfigCommand;
 use App\Commands\SetServiceCommand;
+use App\Commands\SetServiceAllCommand;
 use Symfony\Component\Console\Application;
 
 
 $app= new Application();
 $app->add(new ConfigCommand());
 $app->add(new SetServiceCommand());
+$app->add(new SetServiceAllCommand());
 $app->run();
 
